@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>greet</title>
+</head>
+<body>	
+	<input type="text" id="yourName" />
+	<button type="button" onclick="sayGreeting()">Click Me</button>
+
+    <p id = "demo"></p>
+	<script>
+		function sayGreeting() {
+            
+            yourName = document.getElementById("yourName").value;
+        
+		  if (yourName == "" || !yourName)
+		  	document.getElementById("demo").innerHTML = yourName;
+		  else
+              // console.log("Selamat Datang "+yourName)
+              document.getElementById("demo").innerHTML = yourName;
+        }
+        // document.getElementById("demo").innerHTML = yourName;
+	</script>
+</body>
+</html>

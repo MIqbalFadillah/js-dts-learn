@@ -1,0 +1,43 @@
+<html>
+<body>
+    <p>silahkan masukan angka 1 samai 10</p>
+    
+    <input type="text" id="numb" onkeypress="return onlyNumberKeyPress(event)"/>
+	<button type="button" onclick="btnFunction()">Submit</button>
+
+    <p id = "demo"></p>
+
+    <script>
+    function btnFunction(){
+        var numb = Number.NaN;
+        numb = document.getElementById("numb").value;
+		  if (numb > 10)
+            document.getElementById("demo").innerHTML = "Input yang anda masukan salah....";
+		  else
+            document.getElementById("demo").innerHTML = "Input yang anda masukan benar...";
+          
+    }
+
+    //Menyaring masukan, jika angka maka bisa diinput jika bukan angka maka tidak bisa
+
+    function onlyNumberKeyPress(evt) {
+		  var charCode = (evt.which) ? evt.which : event.keyCode
+		   if (charCode > 31 && (charCode < 48 || charCode > 57))
+ 
+		    return false;
+		  return true;
+		}
+    </script>
+
+</body>
+</html>
+
+
+<!-- 
+//     // var text = "";
+//    var numb = document.getElementById("numb").value;
+//     var i = 2;
+//     for (i = 0; i < 5; i++) {
+//         numb += "The number is " + i + "<br>";
+//     }
+//     document.getElementById("demo").innerHTML = numb; -->
